@@ -68,9 +68,9 @@ ros2 launch navigation hospital_navigation.launch.py
 
 ## Contributors
 
-| Name | Role |
-|------|------|
-| Lê Lữ Anh Khôi | - |
-| Đoàn Nguyễn Anh Khoa | - |
-| Nguyễn Thị Ánh Ngọc | - |
-| Phan Văn Khải | - |
+| Name | 
+|------|
+| Lê Lữ Anh Khôi | 
+| Đoàn Nguyễn Anh Khoa | 
+| Nguyễn Thị Ánh Ngọc | 
+| Phan Văn Khải | 
