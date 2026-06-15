@@ -40,7 +40,7 @@ the total travel distance/time.
 
 ## Dashboard
 
-![Dashboard](Screenshot%20from%202026-04-18%2007-08-54.png)
+<img width="1440" height="887" alt="image" src="https://github.com/user-attachments/assets/dbc06901-c0be-4719-a3b1-2c86f7af0459" />
 
 ## Installation
 
