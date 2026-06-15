@@ -1,38 +1,76 @@
-Introduction
-This project develops an autonomous robot system powered by ROS2, designed to operate within hospital environments and perform navigation tasks across multiple rooms in an optimized sequence.
+# Autonomous Multi-Goal Navigation for Hospital Robot
 
-Unlike basic navigation systems that only handle a single destination, this system addresses the more complex multi-goal navigation problem. This is analogous to the Traveling Salesperson Problem (TSP), where the primary objective is to minimize the total travel distance/time.
+Autonomous robot system powered by ROS2, designed to operate within hospital 
+environments and perform navigation tasks across multiple rooms in an optimized sequence.
 
-The system features a modular design, integrating essential components of a real-world robotic system: SLAM, localization, navigation, task planning, and a user interface.
+Unlike basic navigation systems that only handle a single destination, this system 
+addresses the more complex **multi-goal navigation problem**, analogous to the 
+Traveling Salesperson Problem (TSP), where the primary objective is to minimize 
+the total travel distance/time.
 
-Features
-Multi-point Navigation: Handles multiple destinations with an optimized sequence.
-Route Optimization: Utilizes a Genetic Algorithm (GA) to solve the sequence planning.
-Realistic Cost Calculation: Uses actual path costs from Nav2 instead of simple Euclidean (geometric) distance.
-Automatic Re-planning: Dynamically adjusts the plan when encountering obstacles or unreachable goals.
-Hospital Simulation: Includes a detailed simulation environment with complex rooms and corridors.
-Dash board (GUI): Supports goal selection and real-time system monitoring.
-System Architecture
-The system consists of the following core components:
+## Features
 
-Gazebo: Simulation environment.
-Cartographer: Map construction (SLAM).
-robot_localization (EKF): Sensor data fusion for state estimation.
-Nav2: Global/local path planning and robot command execution.
-Genetic Algorithm: Optimization of the goal visitation order.
-Nav Controller: Execution coordination and re-planning logic.
-Algorithms Used
-Component	Method
-SLAM	Cartographer
-Localization	EKF (Extended Kalman Filter)
-Navigation	Nav2
-Controller	MPPI (Model Predictive Path Integral)
-Task Planning	A* / Genetic Algorithm
-Dashboard
-Dashboard UI
+- **Multi-point Navigation:** Handles multiple destinations with an optimized sequence.
+- **Route Optimization:** Utilizes a Genetic Algorithm (GA) to solve the sequence planning.
+- **Realistic Cost Calculation:** Uses actual path costs from Nav2 instead of simple Euclidean distance.
+- **Automatic Re-planning:** Dynamically adjusts the plan when encountering obstacles or unreachable goals.
+- **Hospital Simulation:** Includes a detailed simulation environment with complex rooms and corridors.
+- **Dashboard (GUI):** Supports goal selection and real-time system monitoring.
 
-Contributer
-Lê Lữ Anh Khôi
-Đoàn Nguyễn Anh Khoa
-Nguyễn Thị Ánh Ngọc
-Phan Văn Khải
+## System Architecture
+
+| Component | Role |
+|-----------|------|
+| Gazebo | Simulation environment |
+| Cartographer | Map construction (SLAM) |
+| robot_localization (EKF) | Sensor data fusion for state estimation |
+| Nav2 | Global/local path planning and robot command execution |
+| Genetic Algorithm | Optimization of the goal visitation order |
+| Nav Controller | Execution coordination and re-planning logic |
+
+## Algorithms Used
+
+| Component | Method |
+|-----------|--------|
+| SLAM | Cartographer |
+| Localization | EKF (Extended Kalman Filter) |
+| Navigation | Nav2 |
+| Controller | MPPI (Model Predictive Path Integral) |
+| Task Planning | A* / Genetic Algorithm |
+
+## Dashboard
+
+![Dashboard](Screenshot%20from%202026-04-18%2007-08-54.png)
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Rubydangoday/ROS2_project.git
+cd ROS2_project
+
+# Install dependencies
+rosdep install --from-paths src --ignore-src -r -y
+
+# Build
+colcon build
+
+# Source
+source install/setup.bash
+```
+
+## Usage
+
+```bash
+# Launch simulation
+ros2 launch navigation hospital_navigation.launch.py
+```
+
+## Contributors
+
+| Name | Role |
+|------|------|
+| Lê Lữ Anh Khôi | - |
+| Đoàn Nguyễn Anh Khoa | - |
+| Nguyễn Thị Ánh Ngọc | - |
+| Phan Văn Khải | - |
